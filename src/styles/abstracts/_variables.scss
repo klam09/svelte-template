@@ -1,0 +1,155 @@
+// lang
+$languages: (
+    en: ('en'),
+    tc: ('zh-Hant'),
+    sc: ('zh-Hans')
+) !default;
+$default-lang: en !default;
+
+$breakpoints: (
+    sm: 0,
+    lg: 480px
+);
+
+$container-widths: (
+    sm: 480px,
+    lg: 720px
+);
+
+$glutters: (
+    sm: 16px,
+    lg: 24px
+);
+
+$grid-columns: (
+    sm: 4,
+    lg: 8
+);
+
+$font-family: 'SF ProText', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-tc: "PingFang TC", "Microsoft JhengHei", 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sc: "PingFang SC", "Microsoft JhengHei", 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$colors: (
+    primary-red: #ef4123,
+    secondary-blue: #00a1e4,
+    orange: #f7771c,
+    green: #83ce3e,
+    blue3: #4ebdec,
+    orange3: #faaa71,
+    black: #000,
+    dark: #333,
+    grey1: #555,
+    grey2: #777,
+    light-grey1: #999,
+    light-grey2: #ccc,
+    light-grey3: #e8e8e8,
+    light-grey4: #f1f3f4,
+    divider-grey: #ddd,
+    white: #fff,
+    bg: #eef1f1,
+    button3: #0082dd,
+    primary-button: #e73910,
+    stars: #fc0,
+    insight-blue: #0080b6,
+    success-green: #7bc23a,
+    chart-grey: #d8d8d8,
+    propspect-red: #c91c47,
+    propspect-orange: #e05900,
+    prospect-yellow: #dea300,
+    prospect-green: #00bf71,
+    prospect-blue: #0082e5,
+    prospect-purple: #7c30e5,
+    table-red: #fef5f3,
+    table-orange: #fffaf4,
+    table-blue: #f3fafd,
+    table-green: #fafff3,
+    target-brown: #ab4400,
+    target-green: #3b7000,
+    target-text-red: #bd280d,
+    target-text-orange: #cf7a12,
+    target-text-blue: #007db3,
+    target-text-green: #4e7a24,
+);
+
+$typefaces: (
+    h1: (
+        weight: 500,
+        size: 40px,
+        lineHeight: 1.2
+    ),
+    h2: (
+        weight: 500,
+        size: 40px,
+        lineHeight: 1.188
+    ),
+    h3: (
+        weight: 500,
+        size: 28px,
+        lineHeight: 1.214
+    ),
+    h4: (
+        weight: 500,
+        size: 24px,
+        lineHeight: 1.209
+    ),
+    title1: (
+        weight: 500,
+        size: 20px,
+        lineHeight: 1.2
+    ),
+    title2: (
+        weight: 500,
+        size: 18px,
+        lineHeight: 1.167
+    ),
+    title3: (
+        weight: 500,
+        size: 16px,
+        lineHeight: 1.209
+    ),
+    title4: (
+        weight: 500,
+        size: 14px,
+        lineHeight: 1.143
+    ),
+    title5: (
+        size: 14px,
+        lineHeight: 1.143
+    ),
+    body1: (
+        size: 20px,
+        lineHeight: 1.2
+    ),
+    body2: (
+        size: 18px,
+        lineHeight: 1.167
+    ),
+    body3: (
+        size: 16px,
+        lineHeight: 1.188
+    ),
+    body4: (
+        size: 14px,
+        lineHeight: 1.143
+    ),
+    caption1: (
+        weight: 500,
+        size: 12px,
+        lineHeight: 1.167
+    ),
+    caption2: (
+        weight: 400,
+        size: 12px,
+        lineHeight: 1.167
+    ),
+    link: (
+        weight: 500,
+        size: 14px,
+        lineHeight: 1.143
+    ),
+    button: (
+        size: 18px,
+        lineHeight: 1.223
+    )
+)

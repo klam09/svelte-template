@@ -1,0 +1,43 @@
+@mixin position($top: null,  $right: null, $bottom: null, $left: null, $position:null) {
+    position: $position;
+
+    @if ($top) {
+        top: $top;
+    }
+
+    @if ($bottom) {
+        bottom: $bottom;
+    }
+
+    @if ($left) {
+        left: $left;
+    }
+
+    @if ($right) {
+        right: $right;
+    }
+}
+
+@mixin absolute($top: null,  $right: null, $bottom: null, $left: null, $position: absolute) {
+    position: $position;
+
+    @if ($top) {
+        top: $top;
+    }
+
+    @if ($bottom) {
+        bottom: $bottom;
+    }
+
+    @if ($left) {
+        left: $left;
+    }
+
+    @if ($right) {
+        right: $right;
+    }
+}
+
+@mixin fixed($top: null,  $right: null, $bottom: null, $left: null) {
+    @include absolute($top, $right, $bottom, $left, fixed);
+}

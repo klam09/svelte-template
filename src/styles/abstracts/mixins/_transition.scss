@@ -1,0 +1,11 @@
+@mixin transition($property, $duration: $transition-duration, $timing-function: $transition-timing-function) {
+    will-change: $property;
+
+    @if (type_of($property) == 'list') {
+        transition-duration: $duration;
+        transition-property: $property;
+        transition-timing-function: $timing-function;
+    } @else {
+        transition: $property $duration $timing-function;
+    }
+}

@@ -1,0 +1,23 @@
+@mixin col($num, $breakpoint) {
+    flex: 0 0 auto;
+
+    @include media-breakpoint-only($breakpoint) {
+        $glutter: map-get($glutters, $breakpoint);
+        $grid-column: map-get($grid-columns, $breakpoint);
+
+        @include padding-x(#{$glutter / 2});
+        width: #{100% * $num / $grid-column};
+    }
+}
+
+@mixin row() {
+    @include flex($flex-wrap: wrap);
+
+    @each $breakpoint, $width in $breakpoints {
+        @include media-breakpoint-only($breakpoint) {
+            $glutter: map-get($glutters, $breakpoint);
+
+            @include margin-x(-#{$glutter / 2});
+        }
+    }
+}

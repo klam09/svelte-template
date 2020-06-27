@@ -1,0 +1,14 @@
+.container {
+    margin: auto;
+    width: 100%;
+
+    @each $breakpoint, $width in $breakpoints {
+        @include media-breakpoint-only($breakpoint) {
+            $container-width: map-get($container-widths, $breakpoint);
+            $glutter: map-get($glutters, $breakpoint);
+
+            @include padding-x($glutter);
+            max-width: $container-width;
+        }
+    }
+}

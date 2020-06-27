@@ -1,0 +1,44 @@
+@mixin margin-x($margin-sizes) {
+    @if (length($margin-sizes) == 1) {
+        margin-left: $margin-sizes;
+        margin-right: $margin-sizes;
+    } @else {
+        margin-left: nth($margin-sizes, 1);
+        margin-right: nth($margin-sizes, 2);
+    }
+}
+
+@mixin margin-y($margin-sizes) {
+    @if (length($margin-sizes) == 1) {
+        margin-bottom: $margin-sizes;
+        margin-top: $margin-sizes;
+    } @else {
+        margin-bottom: nth($margin-sizes, 2);
+        margin-top: nth($margin-sizes, 1);
+    }
+}
+
+@mixin padding-x($padding-sizes) {
+    @if (length($padding-sizes) == 1) {
+        padding-left: $padding-sizes;
+        padding-right: $padding-sizes;
+    } @else {
+        padding-left: nth($padding-sizes, 1);
+        padding-right: nth($padding-sizes, 2);
+    }
+}
+
+@mixin padding-y($padding-sizes) {
+    @if (length($padding-sizes) == 1) {
+        padding-bottom: $padding-sizes;
+        padding-top: $padding-sizes;
+    } @else {
+        padding-bottom: nth($padding-sizes, 2);
+        padding-top: nth($padding-sizes, 1);
+    }
+}
+
+@mixin size($height, $width: $height) {
+    height: $height;
+    width: $width;
+}

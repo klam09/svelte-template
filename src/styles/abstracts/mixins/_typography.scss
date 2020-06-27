@@ -1,0 +1,22 @@
+@mixin typeface($name) {
+    $attr: map-get($typefaces, $name);
+
+    // Font Weight
+    $font-weight: map-get($attr, weight);
+    @if (not $font-weight) {
+        $font-weight: 400;
+    }
+    font-weight: $font-weight;
+
+    // Font Size
+    $font-size: map-get($attr, size);
+    @if ($font-size) {
+        font-size: $font-size;
+    }
+
+    // Line Height
+    $line-height: map-get($attr, lineHeight);
+    @if ($line-height) {
+        line-height: $line-height;
+    }
+}

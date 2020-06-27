@@ -1,0 +1,5 @@
+@each $name, $attr in $typefaces {
+    .typeface-#{$name} {
+        @include typeface($name);
+    }
+}

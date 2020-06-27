@@ -1,0 +1,25 @@
+@mixin bg-image($image: null, $position: center center, $size: 100%, $repeat: no-repeat) {
+    @if ($image) {
+        @if (type-of($image) == list) {
+            background-image: nth($image, 1);
+
+            &:hover {
+                background-image: nth($image, 2);
+            }
+        } @else {
+            background-image: $image;
+        }
+    }
+
+    @if ($position) {
+        background-position: $position;
+    }
+
+    @if ($size) {
+        background-size: $size;
+    }
+
+    @if ($repeat) {
+        background-repeat: $repeat;
+    }
+}

@@ -1,0 +1,48 @@
+html {
+    color: color(dark);
+    font-family: $font-family;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+
+    @include lang(sc) {
+        font-family: $font-family-sc;
+    }
+
+    @include lang(tc) {
+        font-family: $font-family-tc;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    #root {
+        @include flex($flex-direction: column);
+        min-height: 100%;
+        min-width: 320px;
+
+        > * {
+            flex: 0 0 auto;
+        }
+
+        > main {
+            @include flex();
+            flex: 1 1 auto;
+        }
+    }
+}
+
+.page {
+    @include padding-y(24px);
+    width: 100%;
+}
+
+hr {
+    @include margin-y(20px);
+    border-color: color(divider-grey);
+}
+
+*::selection {
+    background: color(primary-button);
+    color: white;
+}

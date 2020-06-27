@@ -1,0 +1,12 @@
+@mixin flex($align-items: stretch, $justify-content: flex-start, $flex-direction: row, $flex-wrap: nowrap, $is-inline: false) {
+    align-items: $align-items;
+    display: if($is-inline, inline-flex, flex);
+    flex-flow: $flex-direction $flex-wrap;
+    justify-content: $justify-content;
+
+    @if ($flex-direction == 'column') { // Handle IE
+        > * {
+            max-width: 100%;
+        }
+    }
+}

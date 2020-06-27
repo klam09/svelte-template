@@ -1,0 +1,23 @@
+@mixin lang($langCodes: (en)) {
+    @if (type-of($langCodes) != list) {
+        $langCodes: append((), $langCodes);
+    }
+
+    @each $langCode in $langCodes {
+        @if (not map-has-key($languages, $langCode)) {
+            $langCode: en;
+        }
+
+        $langValues: map-get($languages, $langCode);
+
+        @each $langValue in $langValues {
+            @if ($langCode == 'en') {
+                @content;
+            } @else {
+                &:lang(#{$langValue}) {
+                    @content;
+                }
+            }
+        }
+    }
+}

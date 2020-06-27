@@ -1,0 +1,5 @@
+@mixin animation($name, $duration: 1s, $easing: ease, $count: infinite, $direction: normal, $fill-mode: forward) {
+    @if ($name) {
+        animation: $name $duration $easing $direction $count;
+    }
+}

@@ -1,0 +1,7 @@
+@mixin pseudo($type: before, $display: block) {
+    &:#{$type} {
+        @content;
+        content: '';
+        display: $display;
+    }
+}
